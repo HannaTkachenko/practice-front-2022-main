@@ -3,11 +3,7 @@ import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import styles from './Header.module.sass';
 import CONSTANTS from '../../constants';
-import {
-  getUserAction,
-  clearUserStore,
-  headerRequest,
-} from '../../actions/actionCreator';
+import { clearUserStore, headerRequest } from '../../actions/actionCreator';
 import Logo from '../Logo/index';
 
 class Header extends React.Component {
@@ -112,7 +108,10 @@ class Header extends React.Component {
         </div>
         <div className={styles.loginSignnUpHeaders}>
           <div className={styles.numberContainer}>
-            <a className={styles.numberLink} href={`tel:${CONSTANTS.CONTACTS.PHONE}`}></a>
+            <a
+              className={styles.numberLink}
+              href={`tel:${CONSTANTS.CONTACTS.PHONE}`}
+            ></a>
             <img src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`} alt="phone" />
             <span>{CONSTANTS.CONTACTS.PHONE}</span>
           </div>
@@ -125,6 +124,11 @@ class Header extends React.Component {
           <div className={styles.leftNav}>
             <div className={styles.nav}>
               <ul>
+                <li>
+                  <span>
+                    <Link to="/pricing">pricing</Link>
+                  </span>
+                </li>
                 <li>
                   <span>NAME IDEAS</span>
                   <img
