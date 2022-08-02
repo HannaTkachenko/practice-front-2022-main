@@ -13,10 +13,10 @@ const WhySquadHelp = () => {
   );
 
   return (
-    <div className={styles.container__description}>
+    <section className={styles.container__description}>
       <h2 className={styles.blueUnderline}>Why Squadhelp?</h2>
       <div className={styles.cardContainer}>{articles.map(showArticles)}</div>
-    </div>
+    </section>
   );
 };
 
